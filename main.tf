@@ -12,7 +12,7 @@ provider "aws" {
 
 # creation a single aws resource instance
 resource "aws_instance" "example" {
-  ami                    = "ami-0477a95397a9154b3"
+  ami                    = "ami-0faf2c48fc9c8f966"
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.instance.id]
 
@@ -55,7 +55,7 @@ output "public_ip" {
 
 # creation a aws resource instance for Autoscaling
 resource "aws_launch_configuration" "example" {
-  image_id        = "ami-0477a95397a9154b3"
+  image_id        = "ami-0faf2c48fc9c8f966"
   instance_type   = "t2.micro"
   security_groups = [aws_security_group.instance.id]
 
